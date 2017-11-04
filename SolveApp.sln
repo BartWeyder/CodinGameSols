@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SolveApp", "SolveApp\SolveApp.vcxproj", "{FA6EA5E9-C718-4B4F-A24C-303E8E7B900D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KGood", "SolveApp\SolveApp.vcxproj", "{FA6EA5E9-C718-4B4F-A24C-303E8E7B900D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Grail", "Grail\Grail.vcxproj", "{0B469ADC-82A5-46E3-BAAA-5A64A6DFED5A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vortex", "Vortex\Vortex.vcxproj", "{F5A58604-88A5-4284-A345-BB2D7BC68831}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,14 @@ Global
 		{0B469ADC-82A5-46E3-BAAA-5A64A6DFED5A}.Release|x64.Build.0 = Release|x64
 		{0B469ADC-82A5-46E3-BAAA-5A64A6DFED5A}.Release|x86.ActiveCfg = Release|Win32
 		{0B469ADC-82A5-46E3-BAAA-5A64A6DFED5A}.Release|x86.Build.0 = Release|Win32
+		{F5A58604-88A5-4284-A345-BB2D7BC68831}.Debug|x64.ActiveCfg = Debug|x64
+		{F5A58604-88A5-4284-A345-BB2D7BC68831}.Debug|x64.Build.0 = Debug|x64
+		{F5A58604-88A5-4284-A345-BB2D7BC68831}.Debug|x86.ActiveCfg = Debug|Win32
+		{F5A58604-88A5-4284-A345-BB2D7BC68831}.Debug|x86.Build.0 = Debug|Win32
+		{F5A58604-88A5-4284-A345-BB2D7BC68831}.Release|x64.ActiveCfg = Release|x64
+		{F5A58604-88A5-4284-A345-BB2D7BC68831}.Release|x64.Build.0 = Release|x64
+		{F5A58604-88A5-4284-A345-BB2D7BC68831}.Release|x86.ActiveCfg = Release|Win32
+		{F5A58604-88A5-4284-A345-BB2D7BC68831}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

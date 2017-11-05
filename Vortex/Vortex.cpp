@@ -11,11 +11,12 @@ using namespace std;
 
 struct Coord
 {
-	int i, j;
-	Coord(int i, int j)
+	int i, j, value;
+	Coord(int i, int j, int value)
 	{
 		this->i = i;
 		this->j = j;
+		this->value = value;
 	}
 };
 
@@ -35,7 +36,8 @@ int main()
 	cin >> W >> H; cin.ignore();
 	int X;
 	cin >> X; cin.ignore();
-	int movesLeft = X;
+	int fullCycle;
+	int mvs = X;
 	vector< vector<int> > matrix(H, vector<int>(W));
 	vector< vector<int> > answer(H, vector<int>(W));
 
@@ -50,7 +52,7 @@ int main()
 	}
 	if (W % 2 == 0)
 	{
-		if (W == H)
+		if (W <= H)
 			Wmin = 0;
 		else
 			Wmin = 2;
@@ -60,7 +62,7 @@ int main()
 
 	if (H % 2 == 0)
 	{
-		if (H == W)
+		if (H <= W)
 			Hmin = 0;
 		else
 			Hmin = 2;
@@ -91,23 +93,28 @@ int main()
 	
 	for (int i = 0; i < borderCount; i++)
 	{
-		for(int j = i; j < H - i - 1; j++)
+		mvs = X;
+		fullCycle = (W - i * 2 - 1) * 2 + (H - i * 2 - 1) * 2;
+		if (mvs >= fullCycle)
+			mvs = mvs - (mvs / fullCycle) * fullCycle;
+		
+		for (int j = i; j < H - i - 1; j++)
 		{
-			MoveDown(matrix, answer, X, Coord(j, i));
+			MoveDown(matrix, answer, mvs, Coord(j, i, matrix[j][i]));
 		}
-		for (int  j = i; j < W - i - 1; j++)
+		for (int j = i; j < W - i - 1; j++)
 		{
-			MoveRight(matrix, answer, X, Coord(H - 1 - i, j));
+			MoveRight(matrix, answer, mvs, Coord(H - 1 - i, j, matrix[H - 1 - i][j]));
 		}
 		for (int j = H - i - 1; j > i; j--)
 		{
-			MoveUp(matrix, answer, X, Coord(j, W - i - 1));
+			MoveUp(matrix, answer, mvs, Coord(j, W - i - 1, matrix[j][W - i - 1]));
 		}
 		for (int j = W - i - 1; j > i; j--)
 		{
-			MoveLeft(matrix, answer, X, Coord(i, j));
+			MoveLeft(matrix, answer, mvs, Coord(i, j, matrix[i][j]));
 		}
-
+		
 	}
 	// Write an action using cout. DON'T FORGET THE "<< endl"
 	// To debug: cerr << "Debug messages..." << endl;
@@ -130,11 +137,11 @@ void MoveRight(vector<vector<int>> matrix, vector<vector<int>>& answer, int move
 {
 	int borderCount = matrix.size() - el.i - 1;
 	if (matrix[0].size() - el.j - borderCount - 1 >= moves)
-		answer[el.i][el.j + moves] = matrix[el.i][el.j];
+		answer[el.i][el.j + moves] = el.value;
 	else
 	{
 		moves -= matrix[0].size() - el.j - borderCount - 1;
-		MoveUp(matrix, answer, moves, Coord(el.i, matrix[0].size() - borderCount - 1));
+		MoveUp(matrix, answer, moves, Coord(el.i, matrix[0].size() - borderCount - 1, el.value));
 	}
 }
 
@@ -142,11 +149,11 @@ void MoveDown(vector<vector<int>> matrix, vector<vector<int>>& answer, int moves
 {
 	int borderCount = el.j;
 	if (matrix.size() - el.i - borderCount - 1 >= moves)
-		answer[el.i + moves][el.j] = matrix[el.i][el.j];
+		answer[el.i + moves][el.j] = el.value;
 	else
 	{
 		moves -= matrix.size() - el.i - borderCount - 1;
-		MoveRight(matrix, answer, moves, Coord(matrix.size() - 1 - borderCount, el.j));
+		MoveRight(matrix, answer, moves, Coord(matrix.size() - 1 - borderCount, el.j, el.value));
 	}
 }
 
@@ -154,11 +161,11 @@ void MoveLeft(vector<vector<int>> matrix, vector<vector<int>>& answer, int moves
 {
 	int borderCount = el.i;
 	if (el.j - borderCount >= moves)
-		answer[el.i][el.j - moves] = matrix[el.i][el.j];
+		answer[el.i][el.j - moves] = el.value;
 	else
 	{
 		moves -= el.j - borderCount;
-		MoveDown(matrix, answer, moves, Coord(el.i, borderCount));
+		MoveDown(matrix, answer, moves, Coord(el.i, borderCount, el.value));
 	}
 }
 
@@ -166,10 +173,10 @@ void MoveUp(vector<vector<int>> matrix, vector<vector<int>>& answer, int moves, 
 {
 	int borderCount = matrix[0].size() - el.j - 1;
 	if (el.i - borderCount >= moves)
-		answer[el.i - moves][el.j] = matrix[el.i][el.j];
+		answer[el.i - moves][el.j] = el.value;
 	else
 	{
 		moves -= el.i - borderCount;
-		MoveLeft(matrix, answer, moves, Coord(borderCount, el.j));
+		MoveLeft(matrix, answer, moves, Coord(borderCount, el.j, el.value));
 	}
 }

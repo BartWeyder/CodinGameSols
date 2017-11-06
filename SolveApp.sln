@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KGood", "SolveApp\SolveApp.vcxproj", "{FA6EA5E9-C718-4B4F-A24C-303E8E7B900D}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Temperatures", "Temperatures\Temperatures.vcxproj", "{B921C6EC-9194-4119-A8C4-715173C84EEE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ASCII Art", "ASCII Art\ASCII Art.vcxproj", "{3C26712B-698E-49F7-89DF-D91FEFA1AB4D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChuckN", "ChuckN\ChuckN.vcxproj", "{7EA8A2F0-6CA9-4CF4-B5FA-08A8403A8A1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,14 @@ Global
 		{3C26712B-698E-49F7-89DF-D91FEFA1AB4D}.Release|x64.Build.0 = Release|x64
 		{3C26712B-698E-49F7-89DF-D91FEFA1AB4D}.Release|x86.ActiveCfg = Release|Win32
 		{3C26712B-698E-49F7-89DF-D91FEFA1AB4D}.Release|x86.Build.0 = Release|Win32
+		{7EA8A2F0-6CA9-4CF4-B5FA-08A8403A8A1B}.Debug|x64.ActiveCfg = Debug|x64
+		{7EA8A2F0-6CA9-4CF4-B5FA-08A8403A8A1B}.Debug|x64.Build.0 = Debug|x64
+		{7EA8A2F0-6CA9-4CF4-B5FA-08A8403A8A1B}.Debug|x86.ActiveCfg = Debug|Win32
+		{7EA8A2F0-6CA9-4CF4-B5FA-08A8403A8A1B}.Debug|x86.Build.0 = Debug|Win32
+		{7EA8A2F0-6CA9-4CF4-B5FA-08A8403A8A1B}.Release|x64.ActiveCfg = Release|x64
+		{7EA8A2F0-6CA9-4CF4-B5FA-08A8403A8A1B}.Release|x64.Build.0 = Release|x64
+		{7EA8A2F0-6CA9-4CF4-B5FA-08A8403A8A1B}.Release|x86.ActiveCfg = Release|Win32
+		{7EA8A2F0-6CA9-4CF4-B5FA-08A8403A8A1B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

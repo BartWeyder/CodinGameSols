@@ -19,6 +19,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Thor", "Thor\Thor.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MIMEType", "MIMEType\MIMEType.vcxproj", "{7DEB3B04-C6DF-47CA-8EDA-0FE121233EA2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Defibrillators", "Defibrillators\Defibrillators.vcxproj", "{D08F6C7D-26FC-439F-B86D-049EE14AB373}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Horse-racing Duals", "Horse-racing Duals\Horse-racing Duals.vcxproj", "{D45601FD-F385-4692-815E-ACAAC6FBF2C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +95,22 @@ Global
 		{7DEB3B04-C6DF-47CA-8EDA-0FE121233EA2}.Release|x64.Build.0 = Release|x64
 		{7DEB3B04-C6DF-47CA-8EDA-0FE121233EA2}.Release|x86.ActiveCfg = Release|Win32
 		{7DEB3B04-C6DF-47CA-8EDA-0FE121233EA2}.Release|x86.Build.0 = Release|Win32
+		{D08F6C7D-26FC-439F-B86D-049EE14AB373}.Debug|x64.ActiveCfg = Debug|x64
+		{D08F6C7D-26FC-439F-B86D-049EE14AB373}.Debug|x64.Build.0 = Debug|x64
+		{D08F6C7D-26FC-439F-B86D-049EE14AB373}.Debug|x86.ActiveCfg = Debug|Win32
+		{D08F6C7D-26FC-439F-B86D-049EE14AB373}.Debug|x86.Build.0 = Debug|Win32
+		{D08F6C7D-26FC-439F-B86D-049EE14AB373}.Release|x64.ActiveCfg = Release|x64
+		{D08F6C7D-26FC-439F-B86D-049EE14AB373}.Release|x64.Build.0 = Release|x64
+		{D08F6C7D-26FC-439F-B86D-049EE14AB373}.Release|x86.ActiveCfg = Release|Win32
+		{D08F6C7D-26FC-439F-B86D-049EE14AB373}.Release|x86.Build.0 = Release|Win32
+		{D45601FD-F385-4692-815E-ACAAC6FBF2C6}.Debug|x64.ActiveCfg = Debug|x64
+		{D45601FD-F385-4692-815E-ACAAC6FBF2C6}.Debug|x64.Build.0 = Debug|x64
+		{D45601FD-F385-4692-815E-ACAAC6FBF2C6}.Debug|x86.ActiveCfg = Debug|Win32
+		{D45601FD-F385-4692-815E-ACAAC6FBF2C6}.Debug|x86.Build.0 = Debug|Win32
+		{D45601FD-F385-4692-815E-ACAAC6FBF2C6}.Release|x64.ActiveCfg = Release|x64
+		{D45601FD-F385-4692-815E-ACAAC6FBF2C6}.Release|x64.Build.0 = Release|x64
+		{D45601FD-F385-4692-815E-ACAAC6FBF2C6}.Release|x86.ActiveCfg = Release|Win32
+		{D45601FD-F385-4692-815E-ACAAC6FBF2C6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
